@@ -1,2 +1,2 @@
-# FullsatckRecipes
+# FullStackRecipes
 Social Recipes
