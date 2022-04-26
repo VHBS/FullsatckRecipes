@@ -1,3 +1,5 @@
+const ServiceUser = require('../services/serviceUser');
+
 const create = (req, res) => {
   const {
     userName,
@@ -26,4 +28,8 @@ const create = (req, res) => {
   if (!result) return res.status(code).json({ message });
 
   res.status(code).json({ message });
+};
+
+module.export = {
+  create,
 };
