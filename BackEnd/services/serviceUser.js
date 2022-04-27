@@ -1,6 +1,6 @@
 const { User } = require('../models');
 
-const create = ({
+const create = async ({
   userName,
   email,
   password,
@@ -11,7 +11,7 @@ const create = ({
   secretQuestion,
   sex
 }) => {
-  const result = User.create({
+  const result = await User.create({
     userName,
     email,
     password,
@@ -28,6 +28,6 @@ const create = ({
   return { result, message: 'User Created', code: 201 };
 };
 
-module.export = {
+module.exports = {
   create,
 };
