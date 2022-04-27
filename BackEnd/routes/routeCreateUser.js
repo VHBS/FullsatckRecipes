@@ -6,4 +6,4 @@ const router = Router();
 
 router.post('/create', controllerUser.create);
 
-module.export = router;
+module.exports = router;

@@ -1,6 +1,6 @@
 const ServiceUser = require('../services/serviceUser');
 
-const create = (req, res) => {
+const create = async (req, res) => {
   const {
     userName,
     email,
@@ -13,7 +13,7 @@ const create = (req, res) => {
     sex
   } = req.body;
 
-  const { result, message, code } = ServiceUser.create({
+  const { result, message, code } = await ServiceUser.create({
     userName,
     email,
     password,
@@ -30,6 +30,6 @@ const create = (req, res) => {
   res.status(code).json({ message });
 };
 
-module.export = {
+module.exports = {
   create,
 };

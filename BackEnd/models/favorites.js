@@ -4,13 +4,13 @@ module.exports = (sequelize, _DataTypes) => {
   
     Favorites.associate = (models) => {
       models.User.belongsToMany(models.Recipes, {
-        as: 'recipes',
+        as: 'recipesFav',
         through: Favorites,
         foreignKey: 'user_id',
         otherKey: 'recipes_id',
       });
       models.Recipes.belongsToMany(models.User, {
-        as: 'user',
+        as: 'userFav',
         through: Favorites,
         foreignKey: 'recipes_id',
         otherKey: 'user_id',
